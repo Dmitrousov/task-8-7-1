@@ -1,12 +1,12 @@
 let minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
-    //if (minValue === NaN){
+    //if (minValue !== Number){
     //    minValue = 0;
     //}
-    //if (minValue < -999 || maxValue > 999){
+    //if (minValue < -999){
     //    minValue = -999;
     //}
 let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
-    //if (maxvalue === NaN){
+    //if (maxvalue !== Number){
     //    maxValue = 100;
     //}
     //if (maxValue < -999 || maxValue > 999){
@@ -84,16 +84,16 @@ document.getElementById('btnEqual').addEventListener('click', function () {
 
 document.getElementById('btnLess').addEventListener('click', function () {
     if (gameRun){
-        if (maxValue === minValue){
+        if (answerNumber === minValue){
             let phraseRandom = Math.round( Math.random());
-            let answerPhrase = (phraseRandom === 1) ?
+            let answerPhrase = (phraseRandom === 0) ?
                 `Вы загадали неправильное число!\n\u{1F914}` :
                 `Я сдаюсь..\n\u{1F92F}`;
 
             answerField.innerText = answerPhrase;
             gameRun = false;
         } else {
-            maxValue = answerNumber;
+            maxValue = answerNumber + 1;
             answerNumber  = Math.floor((maxValue - minValue) / 2);
             orderNumber++;
             orderNumberField.innerText = orderNumber;
