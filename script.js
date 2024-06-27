@@ -1,5 +1,17 @@
 let minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
+    //if (minValue === NaN){
+    //    minValue = 0;
+    //}
+    //if (minValue < -999 || maxValue > 999){
+    //    minValue = -999;
+    //}
 let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+    //if (maxvalue === NaN){
+    //    maxValue = 100;
+    //}
+    //if (maxValue < -999 || maxValue > 999){
+    //    maxValue = 999;
+    //}
 alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
 let answerNumber  = Math.floor((minValue + maxValue) / 2);
 let orderNumber = 1;
