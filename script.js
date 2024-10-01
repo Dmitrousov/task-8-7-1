@@ -137,6 +137,7 @@ document.getElementById('btnRetry').addEventListener('click', function () {
             maxValue = 999;
         }
         alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
+        orderNumberField.innerText = orderNumber;
         orderNumber = 1;
         answerNumber  = Math.floor((minValue + maxValue) / 2);
         answerField.innerText = `Вы загадали число ${answerNumber }?`;
@@ -157,6 +158,7 @@ document.getElementById('btnRetry').addEventListener('click', function () {
             maxValue = 999;
         }
         alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
+        orderNumberField.innerText = orderNumber;
         orderNumber = 1;
         answerNumber  = Math.floor((minValue + maxValue) / 2);
         answerField.innerText = `Вы загадали число ${answerNumber }?`;
