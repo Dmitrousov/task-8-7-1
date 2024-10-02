@@ -96,8 +96,8 @@ document.getElementById('btnLess').addEventListener('click', function () {
             gameRun = false;
         } else {
             minValue = answerNumber - 1;
-            answerNumber  = Math.floor((maxValue - minValue) / 2);
-            orderNumber--;
+            answerNumber  = Math.floor((minValue + maxValue) / 2);
+            orderNumber++;
             orderNumberField.innerText = orderNumber;
             let phraseRandom = Math.round( Math.random() * 3);
             let answerPhrase = phraseRandom; 
