@@ -7,12 +7,8 @@ let maxValue = parseInt(prompt('Максимальное знание числа
         maxValue = 100;
     }
 
-if (minValue < -999){
-    minValue = -999;
-}
-if (maxValue > 999){
-    maxValue = 999;
-}
+minValue < -999 ? minValue = -999 : minValue = 0;
+maxValue > 999 ? maxValue = 999 : maxValue = 100;
 
 alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
 let answerNumber  = Math.floor((minValue + maxValue) / 2);
