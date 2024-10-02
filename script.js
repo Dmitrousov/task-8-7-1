@@ -95,7 +95,7 @@ document.getElementById('btnLess').addEventListener('click', function () {
             answerField.innerText = answerPhrase;
             gameRun = false;
         } else {
-            minValue = answerNumber - 1;
+            maxValue = answerNumber - 1;
             answerNumber  = Math.floor((minValue + maxValue) / 2);
             orderNumber++;
             orderNumberField.innerText = orderNumber;
